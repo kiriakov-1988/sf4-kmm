@@ -14,6 +14,7 @@ namespace App\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -34,4 +35,14 @@ class Task9Controller extends AbstractController
             'data' => $data,
         ]);
     }
+
+    public function jsonAPI()
+    {
+        return new JsonResponse([
+            'name' => "Misha",
+            'age' => 29,
+        ]);
+    }
+
+
 }

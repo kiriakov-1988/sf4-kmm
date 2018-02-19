@@ -9,3 +9,7 @@ index:
 simpleText:
     path: /simpleText/
     controller: App\Controller\Task9Controller::simpleText
+
+JSON:
+    path: /json/
+    controller: App\Controller\Task9Controller::jsonAPI
