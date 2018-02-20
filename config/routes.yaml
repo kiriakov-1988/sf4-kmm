@@ -19,3 +19,9 @@ simpleText:
 JSON:
     path: /json/
     controller: App\Controller\Task9Controller::jsonAPI
+
+RDRCT:
+    path: /my-redirect/{page_site}
+    controller: App\Controller\Task9Controller::goToGoogle
+    defaults:
+            page_site: google.com
