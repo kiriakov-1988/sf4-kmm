@@ -45,4 +45,9 @@ class Task9Controller extends AbstractController
     }
 
 
+
+    public function goToGoogle($page_site)
+    {
+        return $this->redirect("http://$page_site");
+    }
 }
