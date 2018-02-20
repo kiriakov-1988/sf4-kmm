@@ -6,6 +6,10 @@ index:
     path: /
     controller: App\Controller\DefaultController::index
 
+blog_show:
+    path: /blog/{slug}
+    controller: App\Controller\BlogController::showAction
+
 simpleText:
     path: /simpleText/
     controller: App\Controller\Task9Controller::simpleText
