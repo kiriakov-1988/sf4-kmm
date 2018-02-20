@@ -65,4 +65,11 @@ class Task9Controller extends AbstractController
     {
         return $this->redirect("http://$page_site");
     }
+
+    public function getNumber($number)
+    {
+        return new Response(
+            '<body><body>Вы ввели число от 1 (defaults) до 100 методом GET: '. $number .'</body></html>'
+        );
+    }
 }
