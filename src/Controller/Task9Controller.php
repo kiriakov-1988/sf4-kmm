@@ -16,6 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 
 class Task9Controller extends AbstractController
@@ -29,7 +30,7 @@ class Task9Controller extends AbstractController
      * @Route("/test-template/{data}", defaults={"data" = "defaults"})
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function showTemplates($data = 1)
+    public function showTemplates($data)
     {
         return $this->render('test/test.html.twig', [
             'data' => $data,
@@ -42,6 +43,20 @@ class Task9Controller extends AbstractController
             'name' => "Misha",
             'age' => 29,
         ]);
+    }
+
+    /**
+     * @Route("/name-from-session/{name}")
+     */
+    public function showNameFromSession(SessionInterface $session, $name)
+    {
+        $value = $session->get('name');
+
+        $session->set('name', $name);
+
+        return new Response(
+            '<body><body>Name from session (previous value): '. $value .'</body></html>'
+        );
     }
 
 
