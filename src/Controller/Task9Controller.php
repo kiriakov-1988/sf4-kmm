@@ -66,6 +66,16 @@ class Task9Controller extends AbstractController
         return $this->redirect("http://$page_site");
     }
 
+
+    /**
+     * @param $number
+     * @return Response
+     * @Route("//post/page/{number}",
+     *          name="number_from_get",
+     *          defaults={"number": 1},
+     *          requirements={"number": "([1-9][0-9]?|100)"}
+     *      )
+     */
     public function getNumber($number)
     {
         return new Response(
