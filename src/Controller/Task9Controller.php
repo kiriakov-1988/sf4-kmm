@@ -70,16 +70,17 @@ class Task9Controller extends AbstractController
     /**
      * @param $number
      * @return Response
-     * @Route("//post/page/{number}",
+     * @Route("/post/page/{number}",
      *          name="number_from_get",
+     *          methods={"GET"},
      *          defaults={"number": 1},
-     *          requirements={"number": "([1-9][0-9]?|100)"}
+     *          requirements={"number": "^([1-9][0-9]?)$"}
      *      )
      */
     public function getNumber($number)
     {
         return new Response(
-            '<body><body>Вы ввели число от 1 (defaults) до 100 методом GET: '. $number .'</body></html>'
+            '<body><body>Вы ввели число от 1 (defaults) до 99 методом GET: '. $number .'</body></html>'
         );
     }
 }
