@@ -1,0 +1,8 @@
+<ul>
+    <li><a href="{{ path('simpleText') }}">Простой текст</a></li>
+    <li><a href="{{ path('test-template', {'data': 'пример'}) }}">Показать шаблон</a></li>
+    <li><a href="{{ path('JSON') }}">Json текст</a></li>
+    <li><a href="{{ path('name-from-session', {'name': 'misha'}) }}">Последнее имя в сессии</a></li>
+    <li><a href="{{ path('RDRCT') }}">Редирект</a></li>
+    <li><a href="{{ path('number_from_get', {'number': 11}) }}">Вернуть число</a></li>
+</ul>

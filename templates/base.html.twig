@@ -4,16 +4,20 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
             <link href="{{ asset('css/main.css') }}" rel="stylesheet">
         {% endblock %}
     </head>
     <body>
+        {% block main_menu %} {{ include('_partials/_main-menu.html.twig') }} {% endblock %}
+
         {% block body %}{% endblock %}
+
         {% block javascripts %}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         {% endblock %}
+
     </body>
 </html>

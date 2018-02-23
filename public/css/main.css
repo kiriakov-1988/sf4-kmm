@@ -4,5 +4,17 @@ body {
 }
 
 p {
-    font-family: "Arial";
+    font-family: Arial;
+}
+
+ul {
+    background: #1b1e21;
+}
+
+li {
+    color: red;
+}
+
+li a {
+    color: white;
 }

@@ -27,7 +27,7 @@ class TaskController extends AbstractController
     }
 
     /**
-     * @Route("/test-template/{data}", defaults={"data" = "defaults"})
+     * @Route("/test-template/{data}", name="test-template", defaults={"data" = "defaults"})
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function showTemplates($data)
@@ -55,7 +55,7 @@ class TaskController extends AbstractController
     }
 
     /**
-     * @Route("/name-from-session/{name}")
+     * @Route("/name-from-session/{name}", name="name-from-session")
      */
     public function showNameFromSession(SessionInterface $session, $name)
     {
