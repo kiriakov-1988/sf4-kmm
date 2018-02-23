@@ -2,33 +2,24 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-# comment
-
-index:
-    path: /
-    controller: App\Controller\DefaultController::index
-
-blog_show:
-    path: /blog/{slug}
-    controller: App\Controller\BlogController::showAction
 
 simpleText:
-    path: /simpleText/
-    controller: App\Controller\Task9Controller::simpleText
+    path: /simple_text/
+    controller: App\Controller\TaskController::simpleText
 
 JSON:
     path: /json/
-    controller: App\Controller\Task9Controller::jsonAPI
+    controller: App\Controller\TaskController::jsonAPI
 
 RDRCT:
     path: /my-redirect/{page_site}
-    controller: App\Controller\Task9Controller::goToGoogle
+    controller: App\Controller\TaskController::goToGoogle
     defaults:
             page_site: google.com
 
 #number_from_get:
 #    path: /post/page/{number}
-#    controller: App\Controller\Task9Controller::getNumber
+#    controller: App\Controller\TaskController::getNumber
 #    defaults:
 #      number: 1
 #    methods: [GET]
