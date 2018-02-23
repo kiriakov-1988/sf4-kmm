@@ -1,5 +1,14 @@
-<body>
-    <body>
-        Вы ввели число от 1 (defaults) до 99 методом GET: {{ number }}
-    </body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style type="text/css">
+        h4 {
+            color: red;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h4>Вы ввели число от 1 (defaults) до 99 методом GET: {{ number }}</h4>
+{% endblock %}

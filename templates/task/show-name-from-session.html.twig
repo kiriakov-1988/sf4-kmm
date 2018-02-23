@@ -1,5 +1,7 @@
-<html>
-    <body>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container bg-white">
         Name from session (previous value): {{ value }}
-    </body>
-</html>
+    </div>
+{% endblock %}
