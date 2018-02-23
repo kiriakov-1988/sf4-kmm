@@ -3,11 +3,7 @@
  * Created by PhpStorm.
  * User: Misha
  * Date: 19.02.2018
-<<<<<<< HEAD
  * Time: 21:52
-=======
- * Time: 22:03
->>>>>>> feature-templates
  */
 
 namespace App\Controller;
