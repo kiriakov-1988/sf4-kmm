@@ -4,7 +4,8 @@
 
 
 simpleText:
-    path: /simple_text/
+#    path: /simple_text/
+    path: /
     controller: App\Controller\TaskController::simpleText
 
 JSON:

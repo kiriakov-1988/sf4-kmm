@@ -18,3 +18,14 @@ li {
 li a {
     color: white;
 }
+
+ul.menu {
+    background: white;
+}
+
+.menu li {
+    list-style-type: none;
+}
+.menu a {
+    color: #AA3333;
+}

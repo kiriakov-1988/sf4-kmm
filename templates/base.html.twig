@@ -10,7 +10,11 @@
         {% endblock %}
     </head>
     <body>
-        {% block main_menu %} {{ include('_partials/_main-menu.html.twig') }} {% endblock %}
+        {% block main_menu %} {{ include('_partials/_navbar.html.twig') }} {% endblock %}
+
+        {{ render(controller (
+            'App\\Controller\\MenuController::showMenu'
+        )) }}
 
         {% block body %}{% endblock %}
 
