@@ -1,39 +1,39 @@
 <hr>
-<ul class="menu">
-    {% for key, item in menu %}
+{#<ul class="menu">#}
+    {#{% for key, item in menu %}#}
 
-        {% if item is iterable %}
-            <li><a href="#">{{ key }}  </a></li>
-            {% for sub_item in item %}
-                <li><a href="#"> -> {{ sub_item }} </a></li>
-            {% endfor %}
-        {% else %}
-            <li><a href="#"> {{ item }} </a></li>
-        {% endif %}
+        {#{% if item is iterable %}#}
+            {#<li><a href="#">{{ key }}  </a></li>#}
+            {#{% for sub_item in item %}#}
+                {#<li><a href="#"> -> {{ sub_item }} </a></li>#}
+            {#{% endfor %}#}
+        {#{% else %}#}
+            {#<li><a href="#"> {{ item }} </a></li>#}
+        {#{% endif %}#}
 
-    {% endfor %}
-</ul>
+    {#{% endfor %}#}
+{#</ul>#}
 
 {#{{ dump(menu)  }}#}
 
-{#{% import _self as macro %}#}
+{% import _self as macro %}
 
-{#{{ macro.multilevel(menu) }}#}
+{{ macro.multilevel(menu) }}
 
-{#{% macro multilevel(array) %}#}
-    {#{% import _self as macro %}#}
-    {#<ul class="menu">#}
-        {#{% for item in array %}#}
-            {#<li>#}
-                {#{% if item is iterable %}#}
-                    {#{{ item[0] }}#}
-                    {#{{ macro.multilevel(item) }}#}
-                {#{% else %}#}
-                    {#- {{ item }}#}
-                {#{% endif %}#}
-            {#</li>#}
-        {#{% endfor %}#}
-    {#</ul>#}
-{#{% endmacro %}#}
+{% macro multilevel(array) %}
+    {% import _self as macro %}
+    <ul class="menu">
+        {% for key, item in array %}
+            <li>
+                {% if item is iterable %}
+                    {{ key }}
+                    {{ macro.multilevel(item) }}
+                {% else %}
+                    {{ item }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
 
 <hr>
