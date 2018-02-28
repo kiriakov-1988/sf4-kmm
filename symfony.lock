@@ -20,11 +20,20 @@
     "doctrine/common": {
         "version": "v2.8.1"
     },
+    "doctrine/dbal": {
+        "version": "v2.6.3"
+    },
     "doctrine/inflector": {
         "version": "v1.3.0"
     },
+    "doctrine/instantiator": {
+        "version": "1.1.0"
+    },
     "doctrine/lexer": {
         "version": "v1.0.1"
+    },
+    "doctrine/orm": {
+        "version": "v2.6.1"
     },
     "psr/cache": {
         "version": "1.0.1"
