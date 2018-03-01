@@ -141,21 +141,23 @@ class Post
         $this->updated_at = $updated_at;
     }
 
-    /**
-     * @return mixed
-     */
-    public function addComments()
-    {
-        return $this->comments;
-    }
 
-    /**
-     * @param mixed $comments
-     */
-    public function setComments($comments): void
-    {
-        $this->comments = $comments;
-    }
+//      По факту addComments не будет работать !!
+//    /**
+//     * @return mixed
+//     */
+//    public function getComments()
+//    {
+//        return $this->comments;
+//    }
+//
+//    /**
+//     * @param mixed $comments
+//     */
+//    public function addComments($comments): void
+//    {
+//        $this->comments = $comments;
+//    }
 
     /**
      * @return mixed
@@ -186,7 +188,7 @@ class Post
      */
     public function addTags($tags): void
     {
-        $this->tags = $tags;
+        $this->tags[] = $tags;
     }
 
 

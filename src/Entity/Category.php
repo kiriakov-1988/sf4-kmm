@@ -63,21 +63,21 @@ class Category
         $this->name = $name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPostes()
-    {
-        return $this->postes;
-    }
-
-    /**
-     * @param mixed $postes
-     */
-    public function addPostes($postes): void
-    {
-        $this->postes = $postes;
-    }
+//    /**
+//     * @return mixed
+//     */
+//    public function getPostes()
+//    {
+//        return $this->postes;
+//    }
+//
+//    /**
+//     * @param mixed $postes
+//     */
+//    public function addPostes($postes): void
+//    {
+//        $this->postes = $postes;
+//    }
 
 
 }

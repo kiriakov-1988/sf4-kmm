@@ -74,7 +74,7 @@ class Tag
      */
     public function addPostesWithTags($postesWithTags): void
     {
-        $this->postesWithTags = $postesWithTags;
+        $this->postesWithTags[] = $postesWithTags;
     }
 
 
